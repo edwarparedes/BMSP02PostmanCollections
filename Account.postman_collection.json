@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "efe59219-75d9-4eba-9346-d0dc691e08c1",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/62104247bcd6955a1333f85f",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"62104247bcd6955a1333f85f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{        \r\n    \"accountNumber\": \"19216826459502\",\r\n    \"maintenanceFee\": 0.0,\r\n    \"movementLimit\": 5,\r\n    \"transactionFee\": 3,\r\n    \"balance\": 100,\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Edwar Robin\",\r\n            \"lastName\": \"Perez\",\r\n            \"documentType\": \"DNI\",\r\n            \"documentNumber\": \"25647512\"\r\n        }\r\n    ],\r\n    \"signatories\": [],\r\n    \"customerId\": \"621ad47b1240b148d2ecb85c\",\r\n    \"productId\": \"621a66d24c59532734d374bc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"621c987aff8f4e2b9427f11f\",\r\n    \"accountNumber\": \"19216826459500\",\r\n    \"maintenanceFee\": 0.0,\r\n    \"movementLimit\": 0,\r\n    \"transactionFee\": 3.0,\r\n    \"balance\": 6.0,\r\n    \"creationTime\": \"2022-02-28T04:40:09.982\",\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Edwar Robin\",\r\n            \"lastName\": \"Perez\",\r\n            \"documentType\": \"DNI\",\r\n            \"documentNumber\": \"25647512\"\r\n        }\r\n    ],\r\n    \"signatories\": [],\r\n    \"customerProfile\": \"General\",\r\n    \"customerId\": \"621ad47b1240b148d2ecb85c\",\r\n    \"productId\": \"62179431a2896948d7ce24fd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/621cc2e6bac9a53d09eb466f",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"621cc2e6bac9a53d09eb466f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/customer/620ed9e9661a3478dbb85ce8",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"customer",
+						"620ed9e9661a3478dbb85ce8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/product/620ee663f7f3703b48d8e19e",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"product",
+						"620ee663f7f3703b48d8e19e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/checkbalance/19216826459500",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"checkbalance",
+						"19216826459500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions by accountId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/transactions/6215f1e06321a3494029670f",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"transactions",
+						"6215f1e06321a3494029670f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions by customerId and productId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/transactions2/620ed9e9661a3478dbb85ce8/620ee61ff7f3703b48d8e19d",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"transactions2",
+						"620ed9e9661a3478dbb85ce8",
+						"620ee61ff7f3703b48d8e19d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by account number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8003/account/accountnumber/19216826459500",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"accountnumber",
+						"19216826459500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create vip savings account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"accountNumber\": \"19216826459510\",\r\n    \"maintenanceFee\": 0.0,\r\n    \"movementLimit\": 5,\r\n    \"transactionFee\": 10,\r\n    \"balance\": 0.0,\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Edwar Robin\",\r\n            \"lastName\": \"Perez\",\r\n            \"documentType\": \"DNI\",\r\n            \"documentNumber\": \"25647512\"\r\n        }\r\n    ],\r\n    \"signatories\": [],    \r\n    \"customerId\": \"621ad47b1240b148d2ecb85c\",\r\n    \"productId\": \"621c41f8e9c424084aed420b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/account/vip",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"vip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create pyme current account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"accountNumber\": \"19216826459520\",\r\n    \"maintenanceFee\": 0.0,\r\n    \"movementLimit\": 5,\r\n    \"transactionFee\": 10,\r\n    \"balance\": 0.0,\r\n    \"holders\": [\r\n        {\r\n            \"name\": \"Edwar Robin\",\r\n            \"lastName\": \"Perez\",\r\n            \"documentType\": \"DNI\",\r\n            \"documentNumber\": \"25647512\"\r\n        }\r\n    ],\r\n    \"signatories\": [],    \r\n    \"customerId\": \"621ad5a01240b148d2ecb85d\",\r\n    \"productId\": \"621c66c0e9c424084aed420c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/account/pyme",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"account",
+						"pyme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commissions charged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/transaction/commissionsCharged?accountId=621db470ad08461fa8f2e184&fromDate=2022-02-28&toDate=2022-03-02",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"commissionsCharged"
+					],
+					"query": [
+						{
+							"key": "accountId",
+							"value": "621db470ad08461fa8f2e184"
+						},
+						{
+							"key": "fromDate",
+							"value": "2022-02-28"
+						},
+						{
+							"key": "toDate",
+							"value": "2022-03-02"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
